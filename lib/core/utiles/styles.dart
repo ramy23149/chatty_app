@@ -1,4 +1,6 @@
+import 'package:chatty_app/core/utiles/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class Styles {
   static const textStyle18 =
@@ -9,8 +11,8 @@ abstract class Styles {
     fontSize: 20,
   );
 
-  static const textStyle30 = TextStyle(
-      fontWeight: FontWeight.normal, fontSize: 30, //fontFamily: KMerriweather
+  static final textStyle45 = TextStyle(
+      fontWeight: FontWeight.normal, fontSize: 45.sp, fontFamily: kFontFamily,color: Colors.white
       );
 
   static const textStyle14 =
