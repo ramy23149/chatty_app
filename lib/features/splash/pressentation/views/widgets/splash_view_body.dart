@@ -12,11 +12,7 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody> {
-  void navigateToHomeView() {
-    Future.delayed(const Duration(milliseconds: 2500), () {
-      context.go(RouterApp.kHomeView);
-    });
-  }
+
 
   @override
   void initState() {
@@ -33,5 +29,10 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         style: Styles.textStyle45,
       ),
     );
+  }
+    void navigateToHomeView() {
+    Future.delayed(const Duration(milliseconds: 2500), () {
+      context.go(RouterApp.kHomeView);
+    });
   }
 }
