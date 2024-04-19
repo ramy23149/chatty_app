@@ -33,6 +33,7 @@ class ChattyApp extends StatelessWidget {
       child: ScreenUtilInit(
         designSize: const Size(360, 780),
         builder: (context, child) =>  MaterialApp.router(
+          
           theme: ThemeData(
             scaffoldBackgroundColor: kPrimaryColor
           ),

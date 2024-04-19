@@ -1,10 +1,11 @@
+import 'package:chatty_app/features/auth/pressntation/manager/cubits/facebook_auth_cubit/face_book_auth_cubit.dart';
+import 'package:chatty_app/features/auth/pressntation/manager/cubits/google_auth_cubit/google_auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utiles/styles.dart';
-import '../../manager/cubits/cubit/google_auth_cubit.dart';
 
 class AuthOption extends StatelessWidget {
   const AuthOption({super.key,  this.image, required this.title,});
@@ -15,7 +16,7 @@ class AuthOption extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
       child: InkWell(
         onTap:() {
-          BlocProvider.of<GoogleAuthCubit>(context).signInWithGoogle();
+          BlocProvider.of<FaceBookAuthCubit>(context).signInWithFacebook();
         },
         child: Material(
           borderRadius: BorderRadius.circular(6),

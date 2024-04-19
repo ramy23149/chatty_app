@@ -14,21 +14,22 @@ class AuthRoposImpl implements AuthRepos {
   }
 
   @override
-  Future<Either<AuthError, bool>> signInWithFacebook()async {
-     try {
-  final LoginResult loginResult = await FacebookAuth.instance.login();
-  
-    final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.token);
-  
-    await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
-    return const Right(true);
-}  catch (e) {
-  if (e is FirebaseAuthException) {
+  Future<Either<AuthError, bool>> signInWithFacebook() async {
+    try {
+      final LoginResult loginResult = await FacebookAuth.instance.login();
+
+      final OAuthCredential facebookAuthCredential =
+          FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+      await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+      return const Right(true);
+    } catch (e) {
+      if (e is FirebaseAuthException) {
         return Left(ServerError.fromFireBaseAuthException(e));
       } else {
         return Left(ServerError(e.toString()));
       }
-}
+    }
   }
 
   @override
