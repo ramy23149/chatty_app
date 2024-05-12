@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/auth_repos/auth_repo_impl.dart';
-import 'widgets/home_view_body.dart';
+import 'widgets/auth_view_body.dart';
 
 class AuthView extends StatelessWidget {
   const AuthView({super.key});
